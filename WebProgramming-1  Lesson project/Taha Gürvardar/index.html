@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    <!-- Taha Gürvardar WEB PROGRAMING B-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Cards, Banking, Mortgage, Personal Loans | Citi.com</title>
+    <link rel="icon" href="https://www.citi.com/CBOL/IA/Angular/assets/citiredesign.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.citi.com/CBOL/IA/Angular/assets/citiredesign.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="mainLogo">
+                <img src="	https://www.citi.com/CBOL/IA/Angular/assets/citiredesign.svg" alt="">
+            </div>
+            <div class="header-top-right">
+                <div class="location">
+                    <a style="text-decoration: none;" class="changeLocation"
+                        href="https://online.citi.com/US/ag/citibank-location-finder">
+                        <img src="https://www.citi.com/CBOL/IA/Angular/assets/050-location2x.svg" alt="citi">
+                        <span>atm / branch</span>
+                    </a>
+                </div>
+                <div class="language">
+                    <button class="languageButton">
+                        <img src="https://www.citi.com/CBOL/IA/Angular/assets/icon_globe_med-grey2x.svg" alt="citi">
+                        <span>espanol</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom-left">
+                <ul class="navbar">
+                    <li class="navbarMainList">
+                        <a href="">Credit Cards</a>
+                    </li>
+                    <li class="navbarMainList">
+                        <a href="">Banking</a>
+                    </li>
+                    <li class="navbarMainList">
+                        <a href="">Lending</a>
+                    </li>
+                    <li class="navbarMainList">
+                        <a href="">Investing</a>
+                    </li>
+                    <li class="navbarMainList">
+                        <a href="">Wealth Management</a>
+                    </li>
+                    <li class="navbarMainList">
+                        <a href="">Open an Account <i class="fa-solid fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-bottom-right" style="color:  #04208f; ">
+                <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+                <h4 style=" font-size: 1rem; margin-top: 8px; " class="helpCenter"><b>How can we help?</b></h4>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="blockOne" style="background-image: url(./images/Citi-futuristic-angles-bg-compressed.jpg);">
+            <div class="blockOneContainer">
+                <div class="col-xs-12 col-sm-6 col-md-4 column-one">
+                    <div style="color: #333;" class="subTitle">CITIGOLD<sup>®</sup></div>
+                    <p class="heading--second-title"><b></b>Choose the right Citi<sup>®</sup> credit card for you</p>
+                    <p style="color: #333; font-size: 15px;">Open a new eligible checking account with
+                        Citigold<sup>®</sup>. Earn a cash bonus up to $2,000
+                        with required activities.</p>
+                    <button class="btn-primary"><b>Learn More</b></button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 column-two lifestyleImage">
+                    <img src=".//images/7715_Hero_MPC.png" alt="image">
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 column-three ng-star-inserted">
+                    <form action="" style="margin-left: -20px;" id="logInForm"
+                        onsubmit="return validateAndSubmitSignOn();">
+                        <section style="padding: 0.6rem 1rem;">
+                            <div class="first-sectionForm" style="display: block!important;">
+                                <div class="col-sm-6 sign-user">
+                                    <div class="username">
+                                        <label class="input-field-title" for="username">User ID</label>
+                                        <div class="usernameInput">
+                                            <input class="cds-input" id="username" type="text" placeholder="User ID">
+                                        </div>
+                                        <div style="font-size: 0.7rem;" id="userIdError" class="text-danger"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 sign-password">
+                                    <div class="password">
+                                        <div class="passwordLabel">
+                                            <label class="input-field-title" for="password"
+                                                type="password">Password</label>
+                                        </div>
+                                        <div class="passwordInput">
+                                            <input placeholder="Password" class="cds-input" id="password" type="text">
+                                            <div class="passwordIcon"
+                                                style="margin-top: -37px; margin-left: auto; margin-right: 10px;">
+                                                <div class="eye-icon" onclick="togglePasswordVisibility()">
+                                                    <img style="vertical-align: middle; width: 100%;"
+                                                        src="./images/view.png" alt="view-hide">
+                                                </div>
+                                            </div>
+                                            <div style="font-size: 0.7rem; margin-top: 22px;" id="passwordError"
+                                                class="text-danger"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-sectionForm" style="margin-left: -1px">
+                                <div class="col-sm-6 pb-2 mb-1">
+                                    <div class="remember-user" style="display: flex;">
+                                        <input type="checkbox" class="cds-input cds-checkbox2-input" id="rememberUid"
+                                            onchange="toggleRememberText()">
+                                        <label for="rememberUid" class="cds-checkbox2-label">Remember User ID</label>
+                                        <small id="rememberText" class="text-danger pl-1"></small>
+                                    </div>
+                                    <small style="display: none;" role="alert" class="rememberText pl-1">Do not select
+                                        if you are using a public computer.</small>
+                                </div>
+                            </div>
+                            <div class="third-sectionForm col-xs-12">
+                                <button style="font-size: 0.9rem !important;" class="cds-button-primary sign0n"
+                                    type="button" onclick="validateAndSubmitSignOn()"><b>Sign On</b></button>
+                            </div>
+                            <div class="fourth-sectionForm ">
+                                <div class="col-sm-5 rightSideForm">
+                                    <div class="register-activate d-flex">
+                                        <div class="col-xs-6 anchor-container">
+                                            <a _ngcontent-ssr-c138="" tabindex="0" class="cds-signon-anchor register"
+                                                id="register_acc"
+                                                href="https://online.citi.com/US/ag/bank/registration/set-up-online-access"
+                                                target="_self"> Register </a>
+                                        </div>
+                                        <span class="register-connector">/</span>
+                                        <div class="col-xs-6 anchor-container">
+                                            <a _ngcontent-ssr-c138="" tabindex="0" class="cds-signon-anchor activate"
+                                                id="activate_card" href="https://online.citi.com/US/ag/activate/index"
+                                                target="_self"> Activate </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 leftSideForm">
+                                    <div class="col-xs-6 anchor-container">
+                                        <div class="cds-signon-anchor register">
+                                            <div links="" style="padding-bottom: 10px; display: flex;">
+                                                <div class="col-xs-6 readLine ForgetOrText"> Forgot </div>
+                                                <div class="col-xs-6 readLine">
+                                                    <a id="RequestUserIDReminder"
+                                                        href="https://online.citi.com/US/ag/forgot-userid-pwd/account-type?fuipFlowInd=userID"
+                                                        tabindex="0">User ID</a>
+                                                </div>
+                                                <div class="col-xs-6 readLine ForgetOrText"> or </div>
+                                                <div class="col-xs-6 readLine">
+                                                    <a id="ForgotPassword"
+                                                        href="https://online.citi.com/US/ag/forgot-userid-pwd/account-type?fuipFlowInd=pwd">Password</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div style="width: 100%;" class="row qrCode">
+                            <button id="qrButton" type="button">
+                                <div id="icon-id" class="medium" style="width: 24px; height: 24px;">
+                                    <img width="100%" src="./images/qr-code.png" alt="qrcode">
+                                </div>
+                                <span id="qrButtonText"><b>Passwordless Sign On</b></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="blockTwo">
+            <div class="blockTwoContainer">
+                <a class="block-links-page"
+                    href="https://www.citi.com/credit-cards/compare/view-all-credit-cards?intc=1~7~50~5~LOBA~ViewAllCards~Pos1"
+                    target="_self" onmouseenter="changeImage(this, './images/credit-card2.png')"
+                    onmouseleave="resetImage(this, './images/credit-card.png')">
+                    <div class="imgContainer"><img class="img1" src="./images/credit-card.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Credit Cards</b></p>
+                </a>
+                <a class="block-links-page"
+                    href="https://online.citi.com/US/ag/banking/checking-account?intc=1~7~50~5~LOB~Checking~Pos2"
+                    target="_self" onmouseenter="changeImage(this, './images/credit-card3.png')"
+                    onmouseleave="resetImage(this, './images/credit-card1.png')">
+                    <div class="imgContainer"><img class="img2" src="./images/credit-card1.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Checking Solutions</b></p>
+                </a>
+                <a class="block-links-page"
+                    href="https://www.citi.com/mortgage/home-mortgage?intc=1~7~50~5~LOBA~MortgageRates~Pos3"
+                    target="_self" onmouseenter="changeImage(this, './images/home1.png')"
+                    onmouseleave="resetImage(this, './images/home.png')">
+                    <div class="imgContainer"><img class="img3" src="./images/home.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Mortgage</b></p>
+                </a>
+                <a class="block-links-page"
+                    href="https://online.citi.com/US/ag/personal-loan?intc=1~7~50~5~LOBA~PersonalLoans~Pos4"
+                    target="_self" onmouseenter="changeImage(this, './images/money-back-guarantee1.png')"
+                    onmouseleave="resetImage(this, './images/money-back-guarantee.png')">
+                    <div class="imgContainer"><img class="img4" src="./images/money-back-guarantee.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Personal Loans</b></p>
+                </a>
+                <a class="block-links-page"
+                    href="https://online.citi.com/US/ag/investing/investingwithciti?intc=1~7~50~5~LOBA~InvestingOptions~Pos5"
+                    target="_self" onmouseenter="changeImage(this, './images/bar-chart1.png')"
+                    onmouseleave="resetImage(this, './images/bar-chart.png')">
+                    <div class="imgContainer"><img class="img5" src="./images/bar-chart.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Investing Options</b></p>
+                </a>
+                <a class="block-links-page"
+                    href="https://www.citi.com/small-business/banking?intc=1~7~50~5~LOBA~SmallBusiness~Pos6"
+                    target="_self" onmouseenter="changeImage(this, './images/mall.png')"
+                    onmouseleave="resetImage(this, './images/location.png')">
+                    <div class="imgContainer"><img class="img6" src="./images/location.png" alt=""></div>
+                    <p style="color: #056dae;"><b>Small Business</b></p>
+                </a>
+            </div>
+        </div>
+        <div class="blockThree">
+            <div class="container-three-boxes">
+                <div class="down-container">
+                    <div class="containerHead">
+                        <h2><strong><a _ngcontent-ssr-c188="" target="" class="hoverHeader header1"
+                                    href="https://citi.com/banking/savings-account?intc=acquire_bank_bnr_0823_HP23SavLRNSimGSAV">Simplify
+                                    your savings</a></strong></h2>
+                    </div>
+                    <div class="three-up-body-container">
+                        <div class="imgContainer"><a
+                                href="https://citi.com/banking/savings-account?intc=acquire_bank_bnr_0823_HP23SavLRNSimGSAV">
+                                <img src="./images/firstcont1.jpg" alt="familyimg"></a></div>
+                        <div class="below-image-container">
+                            <span style="color: #333;">24/7 access to digital tools and money transfers with security
+                                you can bank on. Member FDIC.</span>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-container">
+                    <div class="containerHead">
+                        <h2><strong><a _ngcontent-ssr-c188="" target="" class="hoverHeader header2"
+                                    href="https://online.citi.com/US/ag/installment-loan?intc=6~23~22~BAN~1~PIL_2022_Home~HP">CITI<sup>®</sup>
+                                    PERSONAL LOAN</a></strong></h2>
+                    </div>
+                    <div class="three-up-body-container">
+                        <div class="imgContainer"><a
+                                href="https://online.citi.com/US/ag/installment-loan?intc=6~23~22~BAN~1~PIL_2022_Home~HP">
+                                <img src="./images/kargo.jpg" alt="kargo"></a></div>
+                        <div class="below-image-container below-container2">
+                            <span style="color: #333;">Apply for a personal loan focused on meeting your unique needs
+                                with loan amounts up to $30,000 and no hidden fees.</span>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-container">
+                    <div class="containerHead">
+                        <h2><strong><a _ngcontent-ssr-c188="" target="" class="hoverHeader header3"
+                                    href="https://www.citicards.com/cards/credit/application/flow.action?app=UNSOL&amp;ID=3000&amp;HKOP=4bca8a545b3d83d6691ac624cddc333a1a35d9d52104500319047a43ccc1712d&amp;intc=CitiHP_hero_HP_DP_D2A_STD_lowAPR24NF">
+                                    Low Intro APR Plus No Annual Fee*</a></strong></h2>
+                    </div>
+                    <div class="three-up-body-container">
+                        <div class="imgContainer"><a
+                                href="https://www.citicards.com/cards/credit/application/flow.action?app=UNSOL&amp;ID=3000&amp;HKOP=4bca8a545b3d83d6691ac624cddc333a1a35d9d52104500319047a43ccc1712d&amp;intc=CitiHP_hero_HP_DP_D2A_STD_lowAPR24NF">
+                                <img src="./images/bankcard.jpg" alt="bankcard"></a></div>
+                        <div class="below-image-container">
+                            <span style="color: #333;">Enjoy a Low Intro APR on Balance Transfers and Purchases with
+                                Diamond Preferred®.</span>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockFour">
+            <div class="left-container"><a
+                    href="https://www.citi.com/credit-cards/compare/view-all-credit-cards?afc=105&amp;intc=1~1~52~6~BANR~1~mpc_Default_citicomREDPE_aug2016~OMPC105">
+                    <img src="./images/fourcards.jpg" alt="fourcards"></a></div>
+            <div class="right-container column-one">
+                <div style="color: #333;" class="subTitle">LIFE AND MONEY BY CITI</div>
+                <h2 class="heading--second-title"><b>Choose the right Citi<sup>®</sup> credit card for you</b></h2>
+                <p style="color: #333;">Whether you want Cash Back, Great Airline Miles, Rewards for Costco Members, or
+                    a Low Intro Rate, the choice is all yours.</p>
+                <button class="btn-primary"><b>Learn More</b></button>
+            </div>
+        </div>
+        <div class="blockFive">
+            <div class="right-container column-one">
+                <div class="subTitle">CITI<sup>®</sup> CHECKING ACCOUNTS </div>
+                <h2 style="color: #333;" class="heading--second-title"><b>Unlock checking that grows with you</b></h2>
+                <p style="color: #333;">The higher your balances, the more benefits and services you can enjoy from Citi
+                    Relationship Tiers.</p>
+                <button class="btn-primary"><b>Learn More</b></button>
+            </div>
+            <div class="left-container"><a
+                    href="https://www.citi.com/credit-cards/compare/view-all-credit-cards?afc=105&amp;intc=1~1~52~6~BANR~1~mpc_Default_citicomREDPE_aug2016~OMPC105">
+                    <img src="./images/fourcards.jpg" alt="fourcards"></a></div>
+        </div>
+        <div class="blockSix">
+            <div class="left-container"><a
+                    href="https://www.citi.com/credit-cards/compare/view-all-credit-cards?afc=105&amp;intc=1~1~52~6~BANR~1~mpc_Default_citicomREDPE_aug2016~OMPC105">
+                    <img src="./images/blocksix.png" alt="fourcards"></a></div>
+            <div class="right-container column-one">
+                <div class="subTitle">RACIAL EQUITY AT CITI</div>
+                <h2 style="color: #333;" class="heading--second-title"><b>Action for Racial Equity</b></h2>
+                <p style="color: #333;">We're marshaling the talent and capabilities of our institution like never
+                    before to help communities of color build wealth and strong financial futures.</p>
+                <button class="btn-primary"><b>Learn More</b></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-foot-container">
+            <div class="content-first-footer">
+                <div class="content">
+                    <div class="section">
+                        <h6><b>Why Citi</b></h6>
+                        <ul>
+                            <li><a href="http://www.citigroup.com/citi/" target="_self">Our Story</a></li>
+                            <li><a href="https://jobs.citi.com/" target="_self">Careers</a></li>
+                            <li><a href="https://online.citi.com/US/JRS/pands/detail.do?ID=ServicesOverview"
+                                    target="_self">Benefits and Services</a></li>
+                            <li><a href="https://online.citi.com/US/JRS/pands/detail.do?ID=Rewards"
+                                    target="_self">Rewards</a></li>
+                            <li><a href="https://www.citientertainment.com/?utm_source=CBOL&amp;utm_medium=Footer&amp;utm_campaign=CE_Homepage_Footer"
+                                    target="_self">Citi Entertainment<sup>®</sup></a></li>
+                            <li><a href="https://online.citi.com/US/JRS/portal/template.do?ID=SpecialOffers"
+                                    target="_self">Special Offers</a></li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h6><b>Wealth Management</b></h6>
+                        <ul>
+                            <li><a href="https://online.citi.com/US/ag/citigold-private-client">Citigold<sup>®</sup>
+                                    Private Client</a></li>
+                            <li><a
+                                    href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitigoldOverview">Citigold</a>
+                            </li>
+                            <li><a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitiPriorityOverview">Citi
+                                    Priority</a></li>
+                            <li><a href="https://www.privatebank.citibank.com/">Citi Private Bank</a></li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h6><b>Business Banking</b></h6>
+                        <ul>
+                            <li><a href="https://www.citi.com/small-business/banking ">Small Business Accounts</a></li>
+                            <li><a href="https://www.citibank.com/commercialbank/en/index.html">Commercial Accounts</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h6><b>Rates</b></h6>
+                        <ul>
+                            <li><a href="https://online.citi.com/US/ag/current-interest-rates/checking-saving-accounts">Personal
+                                    Banking</a></li>
+                            <li><a
+                                    href="https://www.citi.com/credit-cards/compare-credit-cards/citi.action?ID=view-all-credit-cards">Credit
+                                    Cards</a></li>
+                            <li><a href="https://www.citi.com/mortgage/purchase-rates">Mortgage</a></li>
+                            <li><a href="https://online.citi.com/US/JRS/portal/template.do?ID=home_equity_rates">Home
+                                    Equity</a></li>
+                            <li><a
+                                    href="https://online.citi.com/US/ag/current-interest-rates/personal-loans-and-lines-of-credit">Lending</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h6><b>Help & Support</b></h6>
+                        <ul>
+                            <li><a href="#" target="_self">Contact Us</a></li>
+                            <li><a href="#" target="_self">Felp & FAQs</a></li>
+                            <li><a href="#" target="_self">Security Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="section last">
+                        <span>
+                            <img src="./images/footerimg.png" alt="citiImg">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-second-footer">
+                <div class="content">
+                    <div class="section section-left">
+                        <div class=""><img src="./images/googlePlay3x.png" alt="googlPlay"></div>
+                        <div class=""><img src="./images/appStore3x.png" alt="appStore"></div>
+                    </div>
+                    <div class="section section-right">
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-third-footer">
+                <div class="content">
+                    <div class="section">
+                        <p><b>© 2023 Citigroup Inc</b></p>
+                        <ul>
+                            <li><a href="https://online.citi.com/US/ag/termsdisclaimer/termsdisclaimerhome">Terms &
+                                    Conditions</a></li>
+                            <li><a href="https://online.citi.com/US/JRS/portal/template.do?ID=Privacy">Privacy</a></li>
+                            <li><a
+                                    href="https://online.citi.com/JRS/portal/template.do?ID=Privacy#notice-at-collection">Notice
+                                    at Collection</a></li>
+                            <li><a href="https://online.citi.com/US/ag/dataprivacyhub">Do Not Sell My Personal
+                                    Information</a></li>
+                            <li><a
+                                    href="https://online.citi.com/US/JRS/portal/template.do?ID=Accessibility">Accessibility</a>
+                            </li>
+                            <li style="color: white; font-size: 12px; margin-top: 5px;">Country & Jurisdictions:</li>
+                            <li><a href="#"><b>United States ></b></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-fourth-footer">
+                <div class="content">
+                    <div class="section">
+                        <p><b>Important Legal Disclosures & Information</b></p>
+                        <p>Citibank.com provides information about and access to accounts and financial services
+                            provided by Citibank, N.A. and its affiliates in the United States and its territories. It
+                            does not, and should not be construed as, an offer, invitation or solicitation of services
+                            to individuals outside of the United States.</p>
+                        <p>Terms, conditions and fees for accounts, products, programs and services are subject to
+                            change. Not all accounts, products, and services as well as pricing described here are
+                            available in all jurisdictions or to all customers. Your eligibility for a particular
+                            product and service is subject to a final determination by Citibank. Your country of
+                            citizenship, domicile, or residence, if other than the United States, may have laws, rules,
+                            and regulations that govern or affect your application for and use of our accounts, products
+                            and services, including laws and regulations regarding taxes, exchange and/or capital
+                            controls that you are responsible for following.</p>
+                        <p>The products, account packages, promotional offers and services described in this website may
+                            not apply to customers of International Personal Bank U.S. in the Citigold® Private Client
+                            International, Citigold® International, Citi International Personal, Citi Global Executive
+                            Preferred, and Citi Global Executive Account Packages.</p>
+                        <p>Deposit products and services are offered by Citibank, N.A., Member FDIC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-fifth-footer">
+                <div class="content">
+                    <div class="section "><img class="img1" src="./images/citiredesign-footer (1).svg" alt="logo"></div>
+                    <div class="section "><img class="img2" src="./images/feedback.png" alt="feedback"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
